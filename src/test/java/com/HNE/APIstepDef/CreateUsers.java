@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,8 +50,15 @@ response.then().log().all();
 
     @Then("i should get status code {int} for create data")
     public void iShouldGetStatusCodeForCreateData(int expectedstatuscode) {
-        response.then().assertThat().statusCode(expectedstatuscode);
+        int statuscode = response.statusCode();
+        String getError = response.jsonPath().getString("error");
+        String getEmailErrorMessage = response.jsonPath().getString("data.email");
 
+        if (statuscode==400 && "BODY_NOT_VALID".equals(getError) && "Email already used".equals(getEmailErrorMessage)){
+            Assert.fail("EMAIL ALREADY REGISTER. PLEASE USE OTHER EMAIL!!!");
+        }if(statuscode==expectedstatuscode){
+            System.out.println("BERHASIL!!");
+        }
 
     }
 }

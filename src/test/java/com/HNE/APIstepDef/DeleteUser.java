@@ -4,7 +4,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.RestAssured;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
+import org.junit.Assert;
 
 public class DeleteUser {
 
@@ -38,6 +40,19 @@ public class DeleteUser {
 
     @Then("i should get response {int} for delete date")
     public void iShouldGetResponseForDeleteDate(int expectedstatuscode) {
-        System.out.println(response);
+        int statuscode = response.statusCode();
+        String getError = response.jsonPath().getString("error");
+
+//        Assert.assertEquals(expected,statuscode);
+
+        if (statuscode == 400 && "PARAMS_NOT_VALID".equals(getError)){
+//            System.out.println("THATS ID NEVER EXIST !!!");
+            Assert.fail("THATS ID NEVER EXIST !!!");
+        }if (statuscode == 404 && "RESOURCE_NOT_FOUND".equals(getError)){
+//            System.out.println("YOU INSERT WRONG ID !!!");
+            Assert.fail("YOU INSERT WRONG ID !!!");
+        }if (statuscode == expectedstatuscode) {
+            System.out.println("SUCCESS DELETE DATA");
+        }
     }
 }

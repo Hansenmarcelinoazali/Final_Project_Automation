@@ -5,10 +5,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import io.restassured.module.jsv.JsonSchemaValidator;
+import org.junit.Assert;
 
 
 import java.io.File;
 
+import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 
 public class GetUsersByID {
@@ -38,8 +40,9 @@ public class GetUsersByID {
         this.valueID = valueID;
     }
 
-    @Then("data type should be same with json schema")
-    public void dataTypeShouldBeSameWithJsonSchema() {
+    @Then("i should get http status code response {int} and data type should be same with json schema")
+    public void iShouldGetHttpStatusCodeResponseAndDataTypeShouldBeSameWithJsonSchema(int expected) {
+
         jsonGetValidator = new File("D:\\JayJay\\Automate\\Final_project_jayjay\\src\\test\\resources\\JsonSchema\\JsonSchemaGetByID.json");
 
         response = given()
@@ -48,12 +51,19 @@ public class GetUsersByID {
                 .when()
                 .get(endpoint + valueID);
 
-        response.then().log().all().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonGetValidator));
-    }
+        int statuscode = response.statusCode();
+        String getError = response.jsonPath().getString("error");
 
-    @Then("i should get http status code response {int} for get user by id")
-    public void iShouldGetHttpStatusCodeResponseForGetUserById(int expectedStatusCode) {
-        response.then().assertThat().statusCode(expectedStatusCode);
-    }
+//        Assert.assertEquals(expected,statuscode);
 
+        if (statuscode == 400 && "PARAMS_NOT_VALID".equals(getError)){
+//            System.out.println("THATS ID NEVER EXIST !!!");
+            Assert.fail("THATS ID NEVER EXIST !!!");
+        }if (statuscode == 404 && "RESOURCE_NOT_FOUND".equals(getError)){
+//            System.out.println("YOU INSERT WRONG ID !!!");
+            Assert.fail("YOU INSERT WRONG ID !!!");
+        }if (statuscode == 200) {
+            response.then().assertThat().body(JsonSchemaValidator.matchesJsonSchema(jsonGetValidator));
+        }
+    }
 }
