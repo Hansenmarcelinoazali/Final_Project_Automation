@@ -20,6 +20,14 @@ public class CartPageLogic {
 
     By finalPriceVar = By.xpath("//*[@id=\"totalp\"]");
 
+    By placeHolderButton = By.xpath("//*[@id=\"page-wrapper\"]/div/div[2]/button");
+
+    By cartButtonWithoutProduct = By.id("cartur");
+
+    By popUpPlaceholder = By.xpath("//*[@id=\"orderModal\"]/div/div/div[2]");
+
+    By inputName = By.xpath("//*[@id=\"name\"]");
+
 
     public CartPageLogic(WebDriver driver){
         this.driver = driver;
@@ -104,5 +112,22 @@ public class CartPageLogic {
         for (WebElement deleteButton : deleteButtons) {
             deleteButton.click();
         }
+    }
+
+    public void placeHolderbutton(){
+        driver.findElement(placeHolderButton).click();
+    }
+
+//    public void clickCartWithoutProduct(){
+//        driver.findElement(cartButtonWithoutProduct).click();
+//    }
+
+    public void popUpDisplayed(){
+        driver.findElement(popUpPlaceholder).isDisplayed();
+    }
+
+    public void inputName(String name){
+        driver.findElement(inputName).sendKeys(name);
+
     }
 }

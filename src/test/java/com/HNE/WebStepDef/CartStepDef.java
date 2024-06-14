@@ -6,6 +6,8 @@ import com.fasterxml.jackson.databind.ser.Serializers;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
+import java.time.Duration;
+
 public class CartStepDef extends BaseTest {
 
     CartPageLogic cartPageLogic;
@@ -48,5 +50,27 @@ cartPageLogic.samsungInCart(expectedSamsungs6);
     @Then("total price is not displayed")
     public void totalPriceIsNotDisplayed()throws InterruptedException {
         cartPageLogic.BlankPrice();
+    }
+
+    @And("user click place holder button")
+    public void userClickPlaceHolderButton() {
+cartPageLogic.placeHolderbutton();
+    }
+
+//    @And("user click Cart without chose product")
+//    public void userClickCartWithoutChoseProduct()throws InterruptedException {
+//
+//        Thread.sleep(Duration.ofSeconds(1));
+//        cartPageLogic.clickCartWithoutProduct();
+//    }
+
+    @Then("popup appear")
+    public void popupAppear() {
+
+    }
+
+    @And("user input name {string}")
+    public void userInputName(String name) {
+        cartPageLogic.inputName(name);
     }
 }
