@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Objects;
 
 public class CartPageLogic {
     WebDriver driver;
@@ -27,7 +28,11 @@ public class CartPageLogic {
     By popUpPlaceholder = By.xpath("//*[@id=\"orderModal\"]/div/div/div[2]");
 
     By inputName = By.xpath("//*[@id=\"name\"]");
-
+    By inputCountryName = By.id("country");
+    By inputCityName = By.id("city");
+    By inputCard = By.id("card");
+    By inputMonth = By.id("month");
+    By inputYear = By.id("year");
 
     public CartPageLogic(WebDriver driver){
         this.driver = driver;
@@ -128,6 +133,53 @@ public class CartPageLogic {
 
     public void inputName(String name){
         driver.findElement(inputName).sendKeys(name);
+    }
 
+    public void inputCountry(String countryName){
+        driver.findElement(inputCountryName).sendKeys(countryName);
+    }
+
+    public void inputCity(String city){
+        driver.findElement(inputCityName).sendKeys(city);
+    }
+
+    public void inputCardNumber(String cardNumber){
+        WebElement element = driver.findElement(inputCard);
+
+        element.sendKeys(cardNumber);
+
+        String getInputValue = element.getAttribute("value");
+
+        if (!getInputValue.matches("\\d+")) {
+            Assert.fail("The String '" + getInputValue + "' Contains Non-Numeric Characters.");
+        } else {
+            System.out.println("Input value '" + getInputValue + "' contains only numeric characters.");
+        }
+    }
+
+    public void inputMonth(String monthVal){
+        WebElement element = driver.findElement(inputMonth);
+
+        element.sendKeys(monthVal);
+
+        String getInputValue = element.getAttribute("value");
+
+        if (getInputValue.matches("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]+$")){
+            Assert.fail("you cannot combine string and integer for this field");
+        }
+    }
+
+    public void inputYear(String yearVal){
+        WebElement element = driver.findElement(inputYear);
+
+        element.sendKeys(yearVal);
+
+        String getValueYear = element.getAttribute("value");
+
+        if (!getValueYear.matches("\\d+")){
+            Assert.fail("The String '" + getValueYear + "' Contains Non-Numeric Characters.");
+        } else {
+            System.out.println("Input value '" + getValueYear + "' contains only numeric characters.");
+        }
     }
 }

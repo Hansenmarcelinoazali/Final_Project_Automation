@@ -83,14 +83,13 @@ Feature: WebAutomation
       And user clicks button add to cart for samsung
       Then user gets popup alert "Product added." and closes popup
       And user click Cart
-#      And user click Cart without chose product
       And user click place holder button
       Then popup appear
       And user input name "Hansen Marcelino Azali 123"
-#      And user input country "Indonesia 123"
-#      And user input city "Jakarta 123"
-#      And user input credit card "nf2i934pun"
-#      And user input month "98237589"
-#      And user Input year "qwerty"
+      And user input country "Indonesia 123"
+      And user input city "Jakarta 1233"
+      And user input credit card "1234"
+      And user input month "98237589"
+      And user Input year "123123"
 
 

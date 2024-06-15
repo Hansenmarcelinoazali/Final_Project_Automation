@@ -73,4 +73,29 @@ cartPageLogic.placeHolderbutton();
     public void userInputName(String name) {
         cartPageLogic.inputName(name);
     }
+
+    @And("user input country {string}")
+    public void userInputCountry(String country) {
+        cartPageLogic.inputCountry(country);
+    }
+
+    @And("user input city {string}")
+    public void userInputCity(String city) {
+        cartPageLogic.inputCity(city);
+    }
+
+    @And("user input credit card {string}")
+    public void userInputCreditCard(String cardNumber) {
+        cartPageLogic.inputCardNumber(cardNumber);
+    }
+
+    @And("user input month {string}")
+    public void userInputMonth(String month) {
+        cartPageLogic.inputMonth(month);
+    }
+
+    @And("user Input year {string}")
+    public void userInputYear(String year) {
+        cartPageLogic.inputYear(year);
+    }
 }
