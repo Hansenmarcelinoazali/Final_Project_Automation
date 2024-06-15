@@ -12,11 +12,9 @@ import java.util.List;
 import java.util.Objects;
 
 public class CartPageLogic {
-    WebDriver driver;
-
     public static int samsungPriceCart;
     public static int macbookPriceCart;
-
+    WebDriver driver;
     By samsungInCart = By.xpath("//*[@id=\"tbodyid\"]/tr/td[2]");
     By deleteButton = By.xpath("//*[@id=\"tbodyid\"]/tr[1]/td[4]/a");
 
@@ -40,14 +38,14 @@ public class CartPageLogic {
     By purchaseButton = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]");
 
 
-    public CartPageLogic(WebDriver driver){
+    public CartPageLogic(WebDriver driver) {
         this.driver = driver;
     }
 
-        public void samsungInCart(String expectedSamsungS6){
+    public void samsungInCart(String expectedSamsungS6) {
         String getSamsung = driver.findElement(samsungInCart).getText();
 
-            Assert.assertEquals(expectedSamsungS6, getSamsung);
+        Assert.assertEquals(expectedSamsungS6, getSamsung);
     }
 
 //    public void deleteButtonInCart(){
@@ -55,7 +53,7 @@ public class CartPageLogic {
 //    }
 
 
-    public void getPriceSamsungandandMac(String samsung, String mac){
+    public void getPriceSamsungandandMac(String samsung, String mac) {
         String xpath = "//td[text()='" + samsung + "']/following-sibling::td[1]";
         WebElement priceElement = driver.findElement(By.xpath(xpath));
 
@@ -73,19 +71,19 @@ public class CartPageLogic {
         int samsungS6PriceDetailHome = HomePageLogic.SamsungS6PriceDetail;
         int macbookPrice = HomePageLogic.MacbookPrice;
 
-        Assert.assertEquals(samsungPriceCart,samsungS6PriceDetailHome);
-        Assert.assertEquals(macbookPriceCart,macbookPrice);
+        Assert.assertEquals(samsungPriceCart, samsungS6PriceDetailHome);
+        Assert.assertEquals(macbookPriceCart, macbookPrice);
 
 
     }
 
-    public void FinalPrice(){
-        int FinalPrice = samsungPriceCart+macbookPriceCart;
+    public void FinalPrice() {
+        int FinalPrice = samsungPriceCart + macbookPriceCart;
 
         String cartFinPri = driver.findElement(finalPriceVar).getText();
         int parseCartFinPr = Integer.parseInt(cartFinPri);
 
-        Assert.assertEquals(FinalPrice,parseCartFinPr);
+        Assert.assertEquals(FinalPrice, parseCartFinPr);
 
 //        List<WebElement> priceElements = driver.findElements(By.xpath("//table[@class='table table-bordered table-hover table-striped']//tbody//tr//td[3]"));
 //
@@ -99,25 +97,25 @@ public class CartPageLogic {
 //        System.out.println("Total Price: " + totalPrice);
     }
 
-    public void delete2Prod() throws InterruptedException{
-        for (int i = 0; i <2 ; i++) {
+    public void delete2Prod() throws InterruptedException {
+        for (int i = 0; i < 2; i++) {
             Thread.sleep(Duration.ofSeconds(2));
             driver.findElement(deleteButton).click();
         }
     }
 
-    public void BlankPrice()throws InterruptedException{
+    public void BlankPrice() throws InterruptedException {
         Thread.sleep(Duration.ofSeconds(2));
         WebElement webElement = driver.findElement(finalPriceVar);
 
-        if (webElement.isDisplayed()){
+        if (webElement.isDisplayed()) {
             System.out.println("ini tidak seharusnya muncul");
-        }else {
+        } else {
             System.out.println("pass");
         }
     }
 
-    public void deleteALlInCart(){
+    public void deleteALlInCart() {
         List<WebElement> deleteButtons = driver.findElements(By.xpath("//table[@class='table table-bordered table-hover table-striped']//tbody//tr//td[4]//a[contains(text(),'Delete')]"));
 
         for (WebElement deleteButton : deleteButtons) {
@@ -125,7 +123,7 @@ public class CartPageLogic {
         }
     }
 
-    public void placeHolderbutton(){
+    public void placeHolderbutton() {
         driver.findElement(placeHolderButton).click();
     }
 
@@ -133,23 +131,23 @@ public class CartPageLogic {
 //        driver.findElement(cartButtonWithoutProduct).click();
 //    }
 
-    public void popUpDisplayed(){
+    public void popUpDisplayed() {
         driver.findElement(popUpPlaceholder).isDisplayed();
     }
 
-    public void inputName(String name){
+    public void inputName(String name) {
         driver.findElement(inputName).sendKeys(name);
     }
 
-    public void inputCountry(String countryName){
+    public void inputCountry(String countryName) {
         driver.findElement(inputCountryName).sendKeys(countryName);
     }
 
-    public void inputCity(String city){
+    public void inputCity(String city) {
         driver.findElement(inputCityName).sendKeys(city);
     }
 
-    public void inputCardNumber(String cardNumber){
+    public void inputCardNumber(String cardNumber) {
         WebElement element = driver.findElement(inputCard);
 
         element.sendKeys(cardNumber);
@@ -163,40 +161,40 @@ public class CartPageLogic {
         }
     }
 
-    public void inputMonth(String monthVal){
+    public void inputMonth(String monthVal) {
         WebElement element = driver.findElement(inputMonth);
 
         element.sendKeys(monthVal);
 
         String getInputValue = element.getAttribute("value");
 
-        if (getInputValue.matches("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]+$")){
+        if (getInputValue.matches("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]+$")) {
             Assert.fail("you cannot combine string and integer for this field");
         }
 
     }
 
-    public void inputYear(String yearVal){
+    public void inputYear(String yearVal) {
         WebElement element = driver.findElement(inputYear);
 
         element.sendKeys(yearVal);
 
         String getValueYear = element.getAttribute("value");
 
-        if (!getValueYear.matches("\\d+")){
+        if (!getValueYear.matches("\\d+")) {
             Assert.fail("The String '" + getValueYear + "' Contains Non-Numeric Characters.");
         } else {
             System.out.println("Input value '" + getValueYear + "' contains only numeric characters.");
         }
 
     }
-    public void PurchaseButton(){
+
+    public void PurchaseButton() {
         driver.findElement(purchaseButton).click();
     }
 
-    public void popUpPurchase(){
+    public void popUpPurchase() {
         driver.findElement(popUpAppear).isDisplayed();
     }
-
-
 }
+
