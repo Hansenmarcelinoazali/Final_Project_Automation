@@ -98,4 +98,14 @@ cartPageLogic.placeHolderbutton();
     public void userInputYear(String year) {
         cartPageLogic.inputYear(year);
     }
+
+    @Then("popup purchase appear")
+    public void popupPurchaseAppear() {
+        cartPageLogic.popUpPurchase();
+    }
+
+    @And("user click purchase button")
+    public void userClickPurchaseButton() {
+    cartPageLogic.PurchaseButton();
+    }
 }

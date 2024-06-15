@@ -2,6 +2,7 @@ package com.HNE.LogicPage;
 
 import io.cucumber.java.bs.A;
 import org.junit.Assert;
+import org.junit.Assume;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,11 @@ public class CartPageLogic {
     By inputCard = By.id("card");
     By inputMonth = By.id("month");
     By inputYear = By.id("year");
+
+    By popUpAppear = By.xpath("/html/body/div[10]");
+
+    By purchaseButton = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]");
+
 
     public CartPageLogic(WebDriver driver){
         this.driver = driver;
@@ -167,6 +173,7 @@ public class CartPageLogic {
         if (getInputValue.matches("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]+$")){
             Assert.fail("you cannot combine string and integer for this field");
         }
+
     }
 
     public void inputYear(String yearVal){
@@ -181,5 +188,15 @@ public class CartPageLogic {
         } else {
             System.out.println("Input value '" + getValueYear + "' contains only numeric characters.");
         }
+
     }
+    public void PurchaseButton(){
+        driver.findElement(purchaseButton).click();
+    }
+
+    public void popUpPurchase(){
+        driver.findElement(popUpAppear).isDisplayed();
+    }
+
+
 }
