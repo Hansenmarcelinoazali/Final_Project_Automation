@@ -124,7 +124,7 @@ Feature: WebAutomation
     And user input name "Hansen Marcelino Azali 123"
     And user input country "Indonesia 123"
     And user input city "Jakarta 1233"
-    And user Input year "123123"
+    And user Input year "123123a"
 
 
   Scenario: Right value for field
