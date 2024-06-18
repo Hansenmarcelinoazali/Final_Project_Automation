@@ -43,11 +43,11 @@ public class HomePageLogic {
 
     public void ClickSamsungGS6() throws InterruptedException {
 
-
         Thread.sleep(Duration.ofSeconds(2).toMillis());
 
-
-        driver.findElement(samsungGS6).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(samsungGS6));
+        element.click();
 
     }
 
@@ -90,6 +90,8 @@ public class HomePageLogic {
     public void ClickMacbook() throws InterruptedException {
 
         Thread.sleep(Duration.ofSeconds(2).toMillis());
+
+
         driver.findElement(MacbookAir).click();
     }
 
