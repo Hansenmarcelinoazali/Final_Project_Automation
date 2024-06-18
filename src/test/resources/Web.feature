@@ -72,25 +72,26 @@ Feature: WebAutomation
     Then total price is not displayed
 
 
-    @FieldValidation
-      Scenario: validation credit card field
-        Given user is on login page
-        And user clicks login button
-        And user inserts valid username "hansenfinal"
-        And user inserts valid password "Hm123456"
-        And user click login
-        And user clicks product Samsung Galaxy S-six
-        And user clicks button add to cart for samsung
-        Then user gets popup alert "Product added." and closes popup
-        And user click Cart
-        And user click place holder button
-        Then popup appear
-        And user input name "Hansen Marcelino Azali 123"
-        And user input country "Indonesia 123"
-        And user input city "Jakarta 1233"
-        And user input credit card "1234a"
+  @FieldValidation
+  Scenario: validation credit card field
+    Given user is on login page
+    And user clicks login button
+    And user inserts valid username "hansenfinal"
+    And user inserts valid password "Hm123456"
+    And user click login
+    And user clicks product Samsung Galaxy S-six
+    And user clicks button add to cart for samsung
+    Then user gets popup alert "Product added." and closes popup
+    And user click Cart
+    And user click place holder button
+    Then popup appear
+    And user input name "Hansen Marcelino Azali 123"
+    And user input country "Indonesia 123"
+    And user input city "Jakarta 1233"
+    And user input credit card "1234a"
 
 
+  @FieldValidation
   Scenario: validation month value
     Given user is on login page
     And user clicks login button
@@ -108,7 +109,7 @@ Feature: WebAutomation
     And user input city "Jakarta 1233"
     And user input month "98237589a"
 
-
+  @FieldValidation
   Scenario: validation year value
     Given user is on login page
     And user clicks login button
@@ -126,7 +127,7 @@ Feature: WebAutomation
     And user input city "Jakarta 1233"
     And user Input year "123123a"
 
-
+  @FieldValidation
   Scenario: Right value for field
     Given user is on login page
     And user clicks login button
