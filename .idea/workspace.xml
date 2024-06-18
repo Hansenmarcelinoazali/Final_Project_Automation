@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc92f189-b24e-46bd-919b-78c942f66d21" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gradle.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradle.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +110,7 @@
       <recent name="com.HNE" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Calculate final price">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Add product to cart">
     <configuration name="Feature: Web" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
@@ -211,10 +212,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Calculate final price" />
-        <item itemvalue="Cucumber Java.Feature: Web" />
-        <item itemvalue="Cucumber Java.Scenario: Login with two different valid accounts" />
         <item itemvalue="Cucumber Java.Scenario: Add product to cart" />
+        <item itemvalue="Cucumber Java.Feature: Web" />
+        <item itemvalue="Cucumber Java.Scenario: Calculate final price" />
+        <item itemvalue="Cucumber Java.Scenario: Login with two different valid accounts" />
         <item itemvalue="Cucumber Java.Scenario: validation month value" />
       </list>
     </recent_temporary>

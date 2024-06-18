@@ -1,5 +1,7 @@
 package com.HNE.LogicPage;
 
+import com.HNE.BaseTest;
+import com.fasterxml.jackson.databind.ser.Serializers;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -16,7 +18,7 @@ public class HomePageLogic {
 
     public static int SamsungS6PriceDetail;
 
-    public static  int MacbookPrice;
+    public static int MacbookPrice;
 
 
     WebDriver driver;
@@ -45,7 +47,11 @@ public class HomePageLogic {
 
         Thread.sleep(Duration.ofSeconds(5).toMillis());
 
-        driver.findElement(samsungGS6).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.elementToBeClickable(samsungGS6)).click();
+
+//        driver.findElement(samsungGS6).click();
+
 
     }
 
@@ -59,7 +65,7 @@ public class HomePageLogic {
 
         driver.findElement(AddToCart).click();
 
-        System.out.println("ini harga samsung "+ SamsungS6PriceDetail);
+        System.out.println("ini harga samsung " + SamsungS6PriceDetail);
     }
 
     public void GetAlertText(String alertExpected) {
@@ -97,7 +103,7 @@ public class HomePageLogic {
         driver.findElement(laptopMenu).click();
     }
 
-    public void AddtoCartMacbook(){
+    public void AddtoCartMacbook() {
         String getPriceMacbook = driver.findElement(PriceDetail).getText();
 
         String priceMacbookString = getPriceMacbook.replaceAll("[^0-9]", "");
