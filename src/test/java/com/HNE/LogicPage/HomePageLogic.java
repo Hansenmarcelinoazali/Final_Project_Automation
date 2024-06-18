@@ -45,6 +45,9 @@ public class HomePageLogic {
 
         Thread.sleep(Duration.ofSeconds(5).toMillis());
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logInModal")));
+
         driver.findElement(samsungGS6).click();
 
     }
