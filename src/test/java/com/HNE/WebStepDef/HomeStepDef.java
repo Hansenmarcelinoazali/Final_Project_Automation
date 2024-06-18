@@ -31,6 +31,7 @@ public class HomeStepDef extends BaseTest {
     @And("user clicks product Samsung Galaxy S-six")
     public void userClicksProductSamsungGalaxySSix() throws InterruptedException {
 
+
         homePageLogic.ClickSamsungGS6();
 
     }

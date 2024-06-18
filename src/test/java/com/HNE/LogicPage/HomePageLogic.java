@@ -20,12 +20,12 @@ public class HomePageLogic {
 
 
     WebDriver driver;
-    By userID = By.xpath("//*[@id=\"nameofuser\"]");
+    By userID = By.id("nameofuser]");
     By samsungGS6 = By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a");
     By AddToCart = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
     By Cart = By.xpath("//*[@id=\"navbarExample\"]/ul/li[4]/a");
     By HomeTopbar = By.xpath("//*[@id=\"navbarExample\"]/ul/li[1]/a");
-    By PriceDetail = By.xpath("//*[@id=\"tbodyid\"]/h3");
+    By PriceDetail = By.cssSelector("h3.price-container");
     By laptopMenu = By.xpath("//a[contains(text(),'Laptops')]");
     By MacbookAir = By.xpath("//*[@id=\"tbodyid\"]/div[3]/div/div/h4/a");
 
@@ -45,9 +45,13 @@ public class HomePageLogic {
 
         Thread.sleep(Duration.ofSeconds(2).toMillis());
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(samsungGS6));
-        element.click();
+        WebElement modal = driver.findElement(By.id("logInModal"));
+        if (modal.isDisplayed()) {
+            WebElement closeButton = driver.findElement(By.id("logInModal"));
+            closeButton.click();
+        }
+
+        driver.findElement(samsungGS6).click();
 
     }
 
@@ -91,6 +95,11 @@ public class HomePageLogic {
 
         Thread.sleep(Duration.ofSeconds(2).toMillis());
 
+        WebElement modal = driver.findElement(By.id("logInModal"));
+        if (modal.isDisplayed()) {
+            WebElement closeButton = driver.findElement(By.id("logInModal"));
+            closeButton.click();
+        }
 
         driver.findElement(MacbookAir).click();
     }
