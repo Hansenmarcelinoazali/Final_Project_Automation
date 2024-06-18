@@ -21,7 +21,7 @@ public class HomePageLogic {
 
     WebDriver driver;
     By userID = By.xpath("//*[@id=\"nameofuser\"]");
-    By samsungGS6 = By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/div/h4/a");
+    By samsungGS6 = By.xpath("//*[@id=\"tbodyid\"]/div[1]/div/a/img");
     By AddToCart = By.xpath("//*[@id=\"tbodyid\"]/div[2]/div/a");
     By Cart = By.xpath("//*[@id=\"navbarExample\"]/ul/li[4]/a");
     By HomeTopbar = By.xpath("//*[@id=\"navbarExample\"]/ul/li[1]/a");
