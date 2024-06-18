@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc92f189-b24e-46bd-919b-78c942f66d21" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gradle.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gradle.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,16 +110,16 @@
       <recent name="com.HNE" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Right value for field">
-    <configuration name="Scenario: Delete product from cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Add product to cart">
+    <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
       <option name="GLUE" value="com.HNE.WebStepDef" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Final_project_jayjay.test" />
-      <option name="NAME_FILTER" value="^Delete product from cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Delete product from cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Delete product from cart" />
+      <option name="NAME_FILTER" value="^Add product to cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add product to cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add product to cart" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -214,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Add product to cart" />
         <item itemvalue="Cucumber Java.Scenario: Right value for field" />
         <item itemvalue="Cucumber Java.Scenario: validation year value" />
         <item itemvalue="Cucumber Java.Scenario: validation month value" />
         <item itemvalue="Cucumber Java.Scenario: validation credit card field" />
-        <item itemvalue="Cucumber Java.Scenario: Delete product from cart" />
       </list>
     </recent_temporary>
   </component>

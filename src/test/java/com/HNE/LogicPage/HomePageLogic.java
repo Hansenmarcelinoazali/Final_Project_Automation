@@ -43,9 +43,7 @@ public class HomePageLogic {
 
     public void ClickSamsungGS6() throws InterruptedException {
 
-        Thread.sleep(Duration.ofSeconds(2).toMillis());
-
-
+        Thread.sleep(Duration.ofSeconds(5).toMillis());
 
         driver.findElement(samsungGS6).click();
 
