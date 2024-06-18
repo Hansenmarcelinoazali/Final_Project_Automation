@@ -37,6 +37,8 @@ public class CartPageLogic {
 
     By purchaseButton = By.xpath("//*[@id=\"orderModal\"]/div/div/div[3]/button[2]");
 
+    By okButton = By.xpath("/html/body/div[10]/div[7]/div/button");
+
 
     public CartPageLogic(WebDriver driver) {
         this.driver = driver;
@@ -193,8 +195,14 @@ public class CartPageLogic {
         driver.findElement(purchaseButton).click();
     }
 
-    public void popUpPurchase() {
+    public void popUpPurchase() throws InterruptedException{
         driver.findElement(popUpAppear).isDisplayed();
+
+        Thread.sleep(2000);
+
+        driver.findElement(okButton).click();
+
+        Thread.sleep(2000);
     }
 }
 

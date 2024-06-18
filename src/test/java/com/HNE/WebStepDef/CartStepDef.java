@@ -5,6 +5,7 @@ import com.HNE.LogicPage.CartPageLogic;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.sl.In;
 
 import java.time.Duration;
 
@@ -99,8 +100,8 @@ cartPageLogic.placeHolderbutton();
         cartPageLogic.inputYear(year);
     }
 
-    @Then("popup purchase appear")
-    public void popupPurchaseAppear() {
+    @Then("popup purchase appear and click OK")
+    public void popupPurchaseAppear() throws InterruptedException {
         cartPageLogic.popUpPurchase();
     }
 

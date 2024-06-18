@@ -15,8 +15,8 @@ HomePageLogic homePageLogic;
         homePageLogic = new HomePageLogic(driver);
     }
 
-    @After
-    public void afterTest() {
-        driver.quit();
-    }
+//    @After
+//    public void afterTest() {
+//        driver.quit();
+//    }
 }
