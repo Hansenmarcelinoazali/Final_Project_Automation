@@ -45,6 +45,7 @@ public class HomePageLogic {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         WebElement closeModalButton = driver.findElement(By.cssSelector(".modal .close")); // Sesuaikan selektor dengan elemen tutup modal
+        wait.until(ExpectedConditions.elementToBeClickable(closeModalButton)).click();
 
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logInModal")));
 
