@@ -27,7 +27,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run Web automation
-        run: ./gradlew cucumber -Ptags="@Web"
+        run: ./gradlew cucumber -Ptags="@WEB"
         continue-on-error: true
 
         #Archive test resutl
@@ -45,6 +45,6 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-          personal_token: ${{ secrets.final }}
+          personal_token: ${{ secrets.GH_PAT_Fin }}
           publish_branch: test-reports
           publish_dir: reports
