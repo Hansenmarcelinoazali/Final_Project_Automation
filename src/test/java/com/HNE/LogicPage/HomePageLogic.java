@@ -42,6 +42,12 @@ public class HomePageLogic {
     }
 
     public void ClickSamsungGS6() throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+        WebElement closeModalButton = driver.findElement(By.cssSelector(".modal .close")); // Sesuaikan selektor dengan elemen tutup modal
+        wait.until(ExpectedConditions.elementToBeClickable(closeModalButton)).click();
+
+
         Thread.sleep(Duration.ofSeconds(2).toMillis());
 
         driver.findElement(samsungGS6).click();
