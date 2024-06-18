@@ -35,7 +35,7 @@ public class HomePageLogic {
     }
 
     public void ProfileChecker(String expectedUserName) {
-        WebDriverWait wait = new WebDriverWait(driver, java.time.Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         String userIDWeb = wait.until(ExpectedConditions.visibilityOfElementLocated(userID)).getText();
 
         Assert.assertEquals(expectedUserName, userIDWeb);
