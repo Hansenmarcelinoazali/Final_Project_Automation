@@ -56,9 +56,6 @@ Feature: WebAutomation
     Then user sees the "Samsung galaxy s6" in the cart menu
     And user click delete all
 
-
-
-
   @DeleteProductFromCart
   Scenario: Delete product from cart
     Given user is on login page

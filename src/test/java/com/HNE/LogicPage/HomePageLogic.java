@@ -3,7 +3,10 @@ package com.HNE.LogicPage;
 import com.HNE.BaseTest;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import org.junit.Assert;
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,7 +18,7 @@ public class HomePageLogic {
 
     public static int SamsungS6PriceDetail;
 
-    public static int MacbookPrice;
+    public static  int MacbookPrice;
 
 
     WebDriver driver;
@@ -29,8 +32,6 @@ public class HomePageLogic {
     By MacbookAir = By.xpath("//*[@id=\"tbodyid\"]/div[3]/div/div/h4/a");
 
 
-    By logInModal = By.id("logInModal");
-
     public HomePageLogic(WebDriver driver) {
         this.driver = driver;
     }
@@ -39,26 +40,17 @@ public class HomePageLogic {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         String userIDWeb = wait.until(ExpectedConditions.visibilityOfElementLocated(userID)).getText();
 
-        Assert.assertEquals(expectedUserName, userIDWeb);
-    }
+        System.out.println(userIDWeb);
 
-    public void clickElementUsingJS(By locator) {
-        WebElement element = driver.findElement(locator);
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("arguments[0].click();", element);
+        Assert.assertEquals(expectedUserName, userIDWeb);
     }
 
     public void ClickSamsungGS6() throws InterruptedException {
 
         Thread.sleep(Duration.ofSeconds(5).toMillis());
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-        // Tunggu hingga modal hilang jika ada
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(logInModal));
-
-        // Gunakan JavaScript Executor untuk mengklik elemen
-        clickElementUsingJS(samsungGS6);
+        driver.findElement(samsungGS6).click();
 
 
     }
@@ -73,7 +65,7 @@ public class HomePageLogic {
 
         driver.findElement(AddToCart).click();
 
-        System.out.println("ini harga samsung " + SamsungS6PriceDetail);
+        System.out.println("ini harga samsung "+ SamsungS6PriceDetail);
     }
 
     public void GetAlertText(String alertExpected) {
@@ -111,7 +103,7 @@ public class HomePageLogic {
         driver.findElement(laptopMenu).click();
     }
 
-    public void AddtoCartMacbook() {
+    public void AddtoCartMacbook(){
         String getPriceMacbook = driver.findElement(PriceDetail).getText();
 
         String priceMacbookString = getPriceMacbook.replaceAll("[^0-9]", "");

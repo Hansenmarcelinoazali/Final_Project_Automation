@@ -191,8 +191,10 @@ public class CartPageLogic {
 
     }
 
+
     public void PurchaseButton() {
         driver.findElement(purchaseButton).click();
+
     }
 
     public void popUpPurchase() throws InterruptedException{
