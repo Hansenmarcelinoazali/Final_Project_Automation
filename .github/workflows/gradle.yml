@@ -25,21 +25,19 @@ jobs:
         with:
           headless: true
 
-      - name: Maximize Chrome window
-        run: |
-          DISPLAY=:99 google-chrome-stable --no-sandbox --start-maximized &
-
       - name: Setup Gradlew
         run: chmod +x gradlew
+
+      - name: Wait for Chrome to be ready
+        run: sleep 5s  # Tunggu sebentar sebelum menjalankan skrip
 
       - name: Run Web automation
         run: ./gradlew cucumber -Ptags="@WEB"
         continue-on-error: true
 
-        #Archive test resutl
-      - name : Archive test result Web Automation
+      - name: Archive test result Web Automation
         if: always()
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4
         with:
           name: Cucumber Report Web
           path: reports
@@ -52,5 +50,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
           personal_token: ${{ secrets.GH_PAT_Fin }}
-          publish_branch: test-reports
+          publish_branch: Web-Automation
           publish_dir: reports
