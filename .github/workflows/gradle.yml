@@ -1,0 +1,50 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1.6.2
+
+      - name: Setup Gradlew
+        run: chmod +x gradlew
+
+      - name: Run Web automation
+        run: ./gradlew cucumber -Ptags="@Web"
+        continue-on-error: true
+
+        #Archive test resutl
+      - name : Archive test result Web Automation
+        if: always()
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: Cucumber Report Web
+          path: reports
+
+      - name: Add .nojekyll file to Cucumber Report directory
+        run: echo "" > reports/.nojekyll
+
+      - name: Deploy Cucumber report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4.0.0
+        with:
+          personal_token: ${{ secrets.final }}
+          publish_branch: test-reports
+          publish_dir: reports
