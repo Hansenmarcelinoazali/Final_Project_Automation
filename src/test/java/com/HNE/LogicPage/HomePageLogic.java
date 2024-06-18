@@ -48,10 +48,13 @@ public class HomePageLogic {
 
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("logInModal")));
 
-
         Thread.sleep(Duration.ofSeconds(2).toMillis());
 
-        driver.findElement(samsungGS6).click();
+
+//        driver.findElement(samsungGS6).click();
+
+        WebElement element = wait.until(ExpectedConditions.elementToBeClickable(samsungGS6));
+        element.click();
     }
 
     public void ClickAddToCartButton() {
