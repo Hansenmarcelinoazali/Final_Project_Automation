@@ -3,10 +3,7 @@ package com.HNE.LogicPage;
 import com.HNE.BaseTest;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,6 +29,8 @@ public class HomePageLogic {
     By MacbookAir = By.xpath("//*[@id=\"tbodyid\"]/div[3]/div/div/h4/a");
 
 
+    By logInModal = By.id("logInModal");
+
     public HomePageLogic(WebDriver driver) {
         this.driver = driver;
     }
@@ -43,14 +42,23 @@ public class HomePageLogic {
         Assert.assertEquals(expectedUserName, userIDWeb);
     }
 
+    public void clickElementUsingJS(By locator) {
+        WebElement element = driver.findElement(locator);
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].click();", element);
+    }
+
     public void ClickSamsungGS6() throws InterruptedException {
 
         Thread.sleep(Duration.ofSeconds(5).toMillis());
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(samsungGS6)).click();
 
-//        driver.findElement(samsungGS6).click();
+        // Tunggu hingga modal hilang jika ada
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(logInModal));
+
+        // Gunakan JavaScript Executor untuk mengklik elemen
+        clickElementUsingJS(samsungGS6);
 
 
     }
