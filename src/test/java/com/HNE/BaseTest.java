@@ -15,7 +15,7 @@ public class BaseTest {
     protected void getDriver() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        options.addArguments("--window-size=1920,1080");
+        options.addArguments("start-maximized");
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(options);
