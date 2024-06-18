@@ -55,3 +55,29 @@ jobs:
           publish_branch: Web-Automation
           publish_dir: reports
 
+
+      - name: Run API Automation
+        run: ./gradlew cucumber -Ptags="@API"
+        continue-on-error: true
+
+        #Archive test resutl
+      - name: Archive test result Web Automation
+        if: always()
+        uses: actions/upload-artifact@v4.3.3
+        with:
+          name: Report API Automation Cucumber
+          path: reports
+
+      - name: Add .nojekyll file to Cucumber Report directory
+        run: echo "" > reports/.nojekyll
+
+      - name: Deploy Cucumber report to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v4.0.0
+        with:
+          personal_token: ${{ secrets.GH_PAT_Fin }}
+          publish_branch: API-Automation
+          publish_dir: reports
+
+
+
