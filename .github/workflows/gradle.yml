@@ -21,7 +21,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Chrome
-        uses: browser-actions/setup-chrome@v1.6.2
+        uses: browser-actions/setup-chrome@v1.7.0
+        with:
+          headless: true
+
+      - name: Maximize Chrome window
+        run: |
+          DISPLAY=:99 google-chrome-stable --no-sandbox --start-maximized &
 
       - name: Setup Gradlew
         run: chmod +x gradlew
