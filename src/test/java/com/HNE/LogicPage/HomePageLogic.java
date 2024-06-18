@@ -42,7 +42,7 @@ public class HomePageLogic {
     }
 
     public void ClickSamsungGS6() throws InterruptedException {
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(Duration.ofSeconds(2).toMillis());
 
         driver.findElement(samsungGS6).click();
     }
@@ -85,7 +85,7 @@ public class HomePageLogic {
 
     public void ClickMacbook() throws InterruptedException {
 
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(Duration.ofSeconds(2).toMillis());
         driver.findElement(MacbookAir).click();
     }
 

@@ -99,13 +99,13 @@ public class CartPageLogic {
 
     public void delete2Prod() throws InterruptedException {
         for (int i = 0; i < 2; i++) {
-            Thread.sleep(Duration.ofSeconds(2));
+            Thread.sleep(Duration.ofSeconds(2).toMillis());
             driver.findElement(deleteButton).click();
         }
     }
 
     public void BlankPrice() throws InterruptedException {
-        Thread.sleep(Duration.ofSeconds(2));
+        Thread.sleep(Duration.ofSeconds(2).toMillis());
         WebElement webElement = driver.findElement(finalPriceVar);
 
         if (webElement.isDisplayed()) {

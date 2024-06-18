@@ -8,8 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/reports/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Web.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Web.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/CartPageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/CartPageLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,7 @@
       <recent name="com.HNE" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: validation year value">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Right value for field">
     <configuration name="Feature: Web" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
@@ -215,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Right value for field" />
+        <item itemvalue="Cucumber Java.Scenario: validation credit card field" />
         <item itemvalue="Cucumber Java.Scenario: validation year value" />
         <item itemvalue="Cucumber Java.Scenario: validation month value" />
-        <item itemvalue="Cucumber Java.Scenario: validation credit card field" />
         <item itemvalue="Cucumber Java.Feature: Web" />
-        <item itemvalue="Cucumber Java.Scenario: Right value for field" />
       </list>
     </recent_temporary>
   </component>
