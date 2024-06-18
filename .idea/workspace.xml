@@ -107,7 +107,7 @@
       <recent name="com.HNE" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Add product to cart">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Login with two different valid accounts">
     <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
@@ -210,9 +210,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Login with two different valid accounts" />
         <item itemvalue="Cucumber Java.Scenario: Add product to cart" />
         <item itemvalue="Cucumber Java.Scenario: validation month value" />
-        <item itemvalue="Cucumber Java.Scenario: Login with two different valid accounts" />
         <item itemvalue="Cucumber Java.Scenario: Right value for field" />
         <item itemvalue="Cucumber Java.Scenario: validation year value" />
       </list>

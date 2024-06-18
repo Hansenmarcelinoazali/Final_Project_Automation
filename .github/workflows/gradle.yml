@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -26,10 +26,7 @@ jobs:
           headless: true
 
       - name: Setup Gradlew
-        run: chmod +x gradlew
-
-      - name: Wait for Chrome to be ready
-        run: sleep 5s  # Tunggu sebentar sebelum menjalankan skrip
+        run: ./gradlew wrapper --gradle-version 7.3.3
 
       - name: Run Web automation
         run: ./gradlew cucumber -Ptags="@WEB"
