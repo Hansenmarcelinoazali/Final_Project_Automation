@@ -33,7 +33,7 @@ public class CreateUsers {
     @And("create user with json file")
     public void createUserWithJsonFile() throws IOException {
 
-        File jsonForpostnewuser = new File("D:\\JayJay\\Automate\\Final_project_jayjay\\src\\test\\resources\\JsonPost\\jsonforcreateuser.json");
+        File jsonForpostnewuser = new File("src/test/resources/JsonPost/jsonforcreateuser.json");
 
         String jsonBody = FileUtils.readFileToString(jsonForpostnewuser,"UTF-8");
 

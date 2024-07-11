@@ -29,9 +29,9 @@ Feature: API
     Then i should get status code 200 for create data
 
     @DeleteUsers
-    Scenario:
+    Scenario: delete users
       Given the API endpoint for delete user data is "https://dummyapi.io/data/v1/user/"
       And header for delete is "app-id" with value "66353e8e83f17c4485d71495"
-      And i delete user with id "60d0fe4f5311236168a109e6"
+      And i delete user with id "60d0fe4f5311236168a109ce"
       Then i should get response 200 for delete date
 

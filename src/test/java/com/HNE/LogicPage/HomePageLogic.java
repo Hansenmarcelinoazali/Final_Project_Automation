@@ -2,6 +2,7 @@ package com.HNE.LogicPage;
 
 import com.HNE.BaseTest;
 import com.fasterxml.jackson.databind.ser.Serializers;
+import org.codehaus.groovy.transform.ThreadInterruptibleASTTransformation;
 import org.junit.Assert;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -36,7 +37,10 @@ public class HomePageLogic {
         this.driver = driver;
     }
 
-    public void ProfileChecker(String expectedUserName) {
+    public void ProfileChecker(String expectedUserName) throws InterruptedException{
+
+
+        Thread.sleep(Duration.ofSeconds(30));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         String userIDWeb = wait.until(ExpectedConditions.visibilityOfElementLocated(userID)).getText();
 
@@ -48,8 +52,6 @@ public class HomePageLogic {
     public void ClickSamsungGS6() throws InterruptedException {
 
         Thread.sleep(Duration.ofSeconds(5).toMillis());
-
-
         driver.findElement(samsungGS6).click();
 
 

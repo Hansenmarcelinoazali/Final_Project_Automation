@@ -43,7 +43,7 @@ public class GetUsersByID {
     @Then("i should get http status code response {int} and data type should be same with json schema")
     public void iShouldGetHttpStatusCodeResponseAndDataTypeShouldBeSameWithJsonSchema(int expected) {
 
-        jsonGetValidator = new File("D:\\JayJay\\Automate\\Final_project_jayjay\\src\\test\\resources\\JsonSchema\\JsonSchemaGetByID.json");
+        jsonGetValidator = new File("src/test/resources/JsonSchema/JsonSchemaGetByID.json");
 
         response = given()
                 .header(appID, appIDValue)

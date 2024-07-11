@@ -6,9 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cc92f189-b24e-46bd-919b-78c942f66d21" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/APIstepDef/CreateUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/APIstepDef/CreateUsers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/APIstepDef/GetUsersByID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/APIstepDef/GetUsersByID.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/CartPageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/CartPageLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/HomePageLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Web.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Web.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/WebStepDef/CartStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/WebStepDef/CartStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/WebStepDef/CucumberHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/WebStepDef/CucumberHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/WebStepDef/HomeStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/WebStepDef/HomeStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/API.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/API.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/JsonPost/jsonforcreateuser.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/JsonPost/jsonforcreateuser.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,15 +139,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Calculate final price" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
       <option name="GLUE" value="com.HNE.WebStepDef" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Final_project_jayjay.test" />
-      <option name="NAME_FILTER" value="^Calculate final price$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Calculate final price$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Calculate final price" />
+      <option name="NAME_FILTER" value="^Add product to cart$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add product to cart$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Add product to cart" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -152,15 +159,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Get Users By ID" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Calculate final price" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/API.feature" />
-      <option name="GLUE" value="com.HNE.WebStepDef com.HNE.APIstepDef" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
+      <option name="GLUE" value="com.HNE.WebStepDef" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Final_project_jayjay.test" />
-      <option name="NAME_FILTER" value="^Get Users By ID$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Get Users By ID$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Get Users By ID" />
+      <option name="NAME_FILTER" value="^Calculate final price$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Calculate final price$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Calculate final price" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -192,15 +199,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Update User By ID" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Right value for field" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/API.feature" />
-      <option name="GLUE" value="com.HNE.WebStepDef com.HNE.APIstepDef" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
+      <option name="GLUE" value="com.HNE.WebStepDef" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Final_project_jayjay.test" />
-      <option name="NAME_FILTER" value="^Update User By ID$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Update User By ID$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Update User By ID" />
+      <option name="NAME_FILTER" value="^Right value for field$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Right value for field$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Right value for field" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -215,10 +222,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Cucumber Java.Feature: Web" />
+        <item itemvalue="Cucumber Java.Scenario: Add product to cart" />
         <item itemvalue="Cucumber Java.Scenario: Login with two different valid accounts" />
-        <item itemvalue="Cucumber Java.Scenario: Update User By ID" />
-        <item itemvalue="Cucumber Java.Scenario: Get Users By ID" />
         <item itemvalue="Cucumber Java.Scenario: Calculate final price" />
+        <item itemvalue="Cucumber Java.Scenario: Right value for field" />
       </list>
     </recent_temporary>
   </component>

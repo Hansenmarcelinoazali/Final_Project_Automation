@@ -22,18 +22,14 @@ public class HomeStepDef extends BaseTest {
 
 
     @Then("user is directed to homepage and sees {string}")
-    public void userIsDirectedToHomepageAndSees(String profileName) {
+    public void userIsDirectedToHomepageAndSees(String profileName)throws InterruptedException {
         homePageLogic.ProfileChecker(profileName);
-
     }
 
 
     @And("user clicks product Samsung Galaxy S-six")
     public void userClicksProductSamsungGalaxySSix() throws InterruptedException {
-
-
         homePageLogic.ClickSamsungGS6();
-
     }
 
     @And("user clicks button add to cart for samsung")

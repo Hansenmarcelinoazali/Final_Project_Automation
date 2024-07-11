@@ -25,7 +25,7 @@ cartPageLogic.samsungInCart(expectedSamsungs6);
     }
 
     @And("user click delete all")
-    public void userClickDelete() {
+    public void userClickDelete() throws InterruptedException{
         cartPageLogic.deleteALlInCart();
 
     }
@@ -41,11 +41,11 @@ cartPageLogic.samsungInCart(expectedSamsungs6);
         cartPageLogic.FinalPrice();
     }
 
-    @And("user click delete for samsung and mac")
-    public void userClickDeleteForSamsungAndMac(){
-//        cartPageLogic.delete2Prod();
-        cartPageLogic.deleteALlInCart();
-    }
+//    @And("user click delete for samsung and mac")
+//    public void userClickDeleteForSamsungAndMac()throws InterruptedException{
+////        cartPageLogic.delete2Prod();
+//        cartPageLogic.deleteALlInCart();
+//    }
 
 
     @Then("total price is not displayed")

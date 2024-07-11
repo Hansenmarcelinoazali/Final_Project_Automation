@@ -117,12 +117,17 @@ public class CartPageLogic {
         }
     }
 
-    public void deleteALlInCart() {
+    public void deleteALlInCart() throws InterruptedException {
+
+        Thread.sleep(Duration.ofSeconds(30).toMillis());
+
         List<WebElement> deleteButtons = driver.findElements(By.xpath("//table[@class='table table-bordered table-hover table-striped']//tbody//tr//td[4]//a[contains(text(),'Delete')]"));
 
         for (WebElement deleteButton : deleteButtons) {
             deleteButton.click();
         }
+
+        Thread.sleep(Duration.ofSeconds(10).toMillis());
     }
 
     public void placeHolderbutton() {
