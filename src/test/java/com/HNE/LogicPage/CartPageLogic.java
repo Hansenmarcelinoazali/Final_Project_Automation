@@ -205,11 +205,11 @@ public class CartPageLogic {
     public void popUpPurchase() throws InterruptedException{
         driver.findElement(popUpAppear).isDisplayed();
 
-        Thread.sleep(2000);
+        Thread.sleep(Duration.ofSeconds(10).toMillis());
 
         driver.findElement(okButton).click();
 
-        Thread.sleep(2000);
+        Thread.sleep(Duration.ofSeconds(10).toMillis());
     }
 }
 

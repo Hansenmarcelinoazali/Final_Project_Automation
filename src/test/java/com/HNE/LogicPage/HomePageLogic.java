@@ -40,7 +40,7 @@ public class HomePageLogic {
     public void ProfileChecker(String expectedUserName) throws InterruptedException{
 
 
-        Thread.sleep(Duration.ofSeconds(30));
+        Thread.sleep(Duration.ofSeconds(30).toMillis());
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         String userIDWeb = wait.until(ExpectedConditions.visibilityOfElementLocated(userID)).getText();
 
