@@ -28,7 +28,7 @@ public class LoginStepDef extends BaseTest {
     }
 
     @And("user inserts valid username {string}")
-    public void userInsertsValidUsername(String validUsername) {
+    public void userInsertsValidUsername(String validUsername)throws InterruptedException {
         loginPageLogic.InputUsernameLogin(validUsername);
     }
 
