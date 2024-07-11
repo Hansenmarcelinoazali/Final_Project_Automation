@@ -28,7 +28,9 @@ public class LoginPageLogic {
         driver.findElement(loginButton).click();
     }
 
-    public void InputUsernameLogin(String UserName) {
+    public void InputUsernameLogin(String UserName) throws InterruptedException {
+
+        Thread. sleep(Duration.ofSeconds(20).toMillis());
         driver.findElement(UserNameBox).sendKeys(UserName);
     }
 
