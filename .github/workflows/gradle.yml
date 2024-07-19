@@ -55,7 +55,7 @@ jobs:
 
 
       - name: Run API Automation
-        run: ./gradlew cucumber -Ptags="@API"
+        run: ./gradlew cucumber -Ptags="@API" --info --warning-mode all
         continue-on-error: true
 
         #Archive test resutl
