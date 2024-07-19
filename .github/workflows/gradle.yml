@@ -31,7 +31,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run Web automation
-        run: ./gradlew cucumber -Ptags="@WEB"
+        run: ./gradlew cucumber -Ptags="@WEB" --info --warning-mode all
         continue-on-error: true
 
         #Archive test resutl
