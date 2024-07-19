@@ -31,7 +31,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Run Web automation
-        run: ./gradlew cucumber -Ptags="@WEB" --info --stacktrace
+        run: ./gradlew cucumber -Ptags="@WEB"
         continue-on-error: true
 
         #Archive test resutl
@@ -55,7 +55,7 @@ jobs:
 
 
       - name: Run API Automation
-        run: ./gradlew cucumber -Ptags="@API" --info --stacktrace
+        run: ./gradlew cucumber -Ptags="@API"
         continue-on-error: true
 
         #Archive test resutl
