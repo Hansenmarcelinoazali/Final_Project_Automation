@@ -110,35 +110,16 @@
       <recent name="com.HNE" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Update User By ID">
-    <configuration name="Feature: Web" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Login with two different valid accounts">
+    <configuration name="Scenario: Calculate final price" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
       <option name="GLUE" value="com.HNE.WebStepDef" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Final_project_jayjay.test" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: Web" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Add product to cart" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
-      <option name="GLUE" value="com.HNE.WebStepDef" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Final_project_jayjay.test" />
-      <option name="NAME_FILTER" value="^Add product to cart$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Add product to cart$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Add product to cart" />
+      <option name="NAME_FILTER" value="^Calculate final price$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Calculate final price$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Calculate final price" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -190,6 +171,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Login with two different valid accounts" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Web.feature" />
+      <option name="GLUE" value="com.HNE.WebStepDef" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Final_project_jayjay.test" />
+      <option name="NAME_FILTER" value="^Login with two different valid accounts$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Login with two different valid accounts$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Login with two different valid accounts" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Update User By ID" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/API.feature" />
@@ -212,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Login with two different valid accounts" />
+        <item itemvalue="Cucumber Java.Scenario: Calculate final price" />
         <item itemvalue="Cucumber Java.Scenario: Update User By ID" />
         <item itemvalue="Cucumber Java.Scenario: Get Users By ID" />
         <item itemvalue="Cucumber Java.Scenario: Get List of Tags" />
-        <item itemvalue="Cucumber Java.Feature: Web" />
-        <item itemvalue="Cucumber Java.Scenario: Add product to cart" />
       </list>
     </recent_temporary>
   </component>

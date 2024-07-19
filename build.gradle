@@ -14,8 +14,12 @@ dependencies {
     implementation group: 'org.json', name: 'json', version: '20240303'
     implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.4.0'
 
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
-    testImplementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
+//    testImplementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.22.0'
+
+//    testImplementation 'io.github.bonigarcia:webdrivermanager:5.8.0'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.9.1'
+
 
     testImplementation 'io.cucumber:cucumber-java:7.17.0'
     testImplementation 'io.cucumber:cucumber-junit:7.17.0'
@@ -26,7 +30,7 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
-//    implementation 'org.slf4j:slf4j-simple:2.0.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.0'
 
 }
 
@@ -43,41 +47,41 @@ configurations {
 
 def tags = (findProperty('tags') == null) ? 'not @exclude' : findProperty('tags') + ' and not @exclude'
 
-//task cucumber() {
-//    description("Running Cucumber Test")
-//    dependsOn assemble, compileTestJava
-//    doLast {
-//        javaexec {
-//            main = "io.cucumber.core.cli.Main"
-//            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-//            args = [
-//                    '--plugin', 'html:reports/index.html',
-//                    '--plugin', 'json:reports/index.json',
-//                    '--plugin', 'pretty',
-//                    '--glue', 'com.HNE',
-//                    '--tags', "${tags}",
-//                    'src/test/resources'
-//            ]
-//        }
-//    }
-//}
+task cucumber() {
+    description("Running Cucumber Test")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/index.html',
+                    '--plugin', 'json:reports/index.json',
+                    '--plugin', 'pretty',
+                    '--glue', 'com.HNE',
+                    '--tags', "${tags}",
+                    'src/test/resources'
+            ]
+        }
+    }
+}
 
-//tasks.withType(Test).configureEach {
-//    systemProperty 'webdriver.chrome.driver', 'path/to/chromedriver'
-//}
+tasks.withType(Test).configureEach {
+    systemProperty 'webdriver.chrome.driver', 'path/to/chromedriver'
+}
 
 
 //version g
-tasks.register('cucumber', JavaExec) {
-    description = "Running Cucumber tests"
-    classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-    main = "io.cucumber.core.cli.Main"
-    args = [
-            '--plugin', 'html:reports/index.html',
-            '--plugin', 'json:reports/index.json',
-            '--plugin', 'pretty',
-            '--glue', 'com.HNE',
-            '--tags', "${tags}",
-            'src/test/resources'
-    ]
-}
+//tasks.register('cucumber', JavaExec) {
+//    description = "Running Cucumber tests"
+//    classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+//    main = "io.cucumber.core.cli.Main"
+//    args = [
+//            '--plugin', 'html:reports/index.html',
+//            '--plugin', 'json:reports/index.json',
+//            '--plugin', 'pretty',
+//            '--glue', 'com.HNE',
+//            '--tags', "${tags}",
+//            'src/test/resources'
+//    ]
+//}
