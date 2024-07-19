@@ -22,8 +22,6 @@ jobs:
 
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1.7.0
-        with:
-          headless: true
 
       - name: Maximize Chrome window
         run: |
