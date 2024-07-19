@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc92f189-b24e-46bd-919b-78c942f66d21" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/CartPageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/CartPageLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/LogoutPageLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/HNE/LogicPage/LogoutPageLogic.java" afterDir="false" />
-    </list>
+    <list default="true" id="cc92f189-b24e-46bd-919b-78c942f66d21" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
