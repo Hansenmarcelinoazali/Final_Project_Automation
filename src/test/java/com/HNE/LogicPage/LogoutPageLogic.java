@@ -15,5 +15,6 @@ public class LogoutPageLogic {
 
     public void logoutButton() {
         driver.findElement(logoutID).click();
+
     }
 }
