@@ -18,7 +18,7 @@ Feature: API
   Scenario: Update User By ID
     Given the API endpoint for update user is "https://dummyapi.io/data/v1/user/"
     And header to update user by id is "app-id" with value "66353e8e83f17c4485d71495"
-    And i update first name to "CAROLINA" and last name "JayJays" for user with id "60d0fe4f5311236168a109e5"
+    And i update first name to "test final" and last name "JayJays" for user with id "60d0fe4f5311236168a109e5"
     Then  i should get response 200 for update users
 
   @CreateUser
@@ -32,6 +32,6 @@ Feature: API
     Scenario: delete users
       Given the API endpoint for delete user data is "https://dummyapi.io/data/v1/user/"
       And header for delete is "app-id" with value "66353e8e83f17c4485d71495"
-      And i delete user with id "60d0fe4f5311236168a109d8"
+      And i delete user with id "60d0fe4f5311236168a109e0"
       Then i should get response 200 for delete date
 
