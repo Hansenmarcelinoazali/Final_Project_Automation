@@ -120,8 +120,8 @@ The result is:
 
 ### Automation for web :
 
-failed to build web automation because some schenario does not meet expectations.
+failed to build web automation because some schenario does not meet expectations. Succes to archived report
 
 ### Automation for API :
 
-Success to build.
+Success to build.  Succes to archived report
