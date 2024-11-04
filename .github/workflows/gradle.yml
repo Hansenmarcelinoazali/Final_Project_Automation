@@ -56,7 +56,7 @@ jobs:
 
       - name: Run API Automation
         run: ./gradlew cucumber -Ptags="@API"
-        continue-on-error: trues
+        continue-on-error: true
 
         #Archive test resutl
       - name: Archive test result Web Automation
