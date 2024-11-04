@@ -49,14 +49,14 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-          personal_token: ${{ secrets.Final_generate_part2 }}
+          personal_token: ${{ secrets.Path_automation_test }}
           publish_branch: Web-Automation
           publish_dir: reports
 
 
       - name: Run API Automation
         run: ./gradlew cucumber -Ptags="@API"
-        continue-on-error: true
+        continue-on-error: trues
 
         #Archive test resutl
       - name: Archive test result Web Automation
