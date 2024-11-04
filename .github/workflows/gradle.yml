@@ -49,7 +49,7 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-          github_token: ${{ secrets.Path_automation_test }}
+          github_token: ${{ secrets.PATH_AUTOMATION_TEST }}
           publish_branch: Web-Automation
           publish_dir: reports
 
@@ -73,7 +73,7 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-          github_token: ${{ secrets.Path_automation_test }}
+          github_token: ${{ secrets.PATH_AUTOMATION_TEST }}
           publish_branch: API-Automation
           publish_dir: reports
 
