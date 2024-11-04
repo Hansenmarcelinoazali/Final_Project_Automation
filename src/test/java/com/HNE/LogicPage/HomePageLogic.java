@@ -4,10 +4,7 @@ import com.HNE.BaseTest;
 import com.fasterxml.jackson.databind.ser.Serializers;
 import org.codehaus.groovy.transform.ThreadInterruptibleASTTransformation;
 import org.junit.Assert;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Sleeper;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -51,10 +48,21 @@ public class HomePageLogic {
 
     public void ClickSamsungGS6() throws InterruptedException {
 
-        Thread.sleep(Duration.ofSeconds(30).toMillis());
-        driver.findElement(samsungGS6).click();
-        Thread.sleep(Duration.ofSeconds(10).toMillis());
+//        Thread.sleep(Duration.ofSeconds(30).toMillis());
+//        driver.findElement(samsungGS6).click();
+//        Thread.sleep(Duration.ofSeconds(10).toMillis());
 
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        try {
+            WebElement samsungGS6Element = wait.until(ExpectedConditions.visibilityOfElementLocated(samsungGS6));
+            samsungGS6Element.click();
+        } catch (StaleElementReferenceException e) {
+            // Log the exception or handle accordingly
+            System.out.println("StaleElementReferenceException caught. Trying to find the element again.");
+            WebElement samsungGS6Element = wait.until(ExpectedConditions.visibilityOfElementLocated(samsungGS6));
+            samsungGS6Element.click();
+        }
 
     }
 

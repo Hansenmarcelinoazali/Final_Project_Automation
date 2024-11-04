@@ -49,7 +49,7 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v4.0.0
         with:
-          personal_token: ${{ secrets.GH_PAT_Fin }}
+          personal_token: ${{ secrets.Final_generate_part2 }}
           publish_branch: Web-Automation
           publish_dir: reports
 
